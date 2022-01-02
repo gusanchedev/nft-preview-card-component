@@ -5,11 +5,101 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | NFT preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="bg-verydarkbluemainbg">
     <div id="app">
-      Equilibrium #3429 Our Equilibrium collection promotes balance and calm.
-      0.041 ETH 3 days left Creation of Jules Wyvern
+      <div
+        class="
+          text-project
+          font-outfit
+          bg-verydarkbluecardbg
+          my-8
+          p-6
+          rounded-xl
+          max-w-xs
+          mx-auto
+        "
+      >
+        <div
+          class="
+            rounded-xl
+            bg-cover bg-no-repeat bg-iconEthereum
+            flex
+            h-72
+            hover:cursor-pointer
+          "
+        >
+          <div
+            class="
+              bg-personalizedcyan
+              w-full
+              h-full
+              rounded-xl
+              flex
+              justify-center
+              items-center
+              opacity-0
+              hover:opacity-70
+            "
+          >
+            <img class="text-personalizedwhite" src="images/icon-view.svg" />
+          </div>
+        </div>
+        <h1
+          class="
+            text-personalizedwhite
+            font-bold
+            text-2xl
+            my-5
+            hover:text-personalizedcyan hover:cursor-pointer
+          "
+        >
+          Equilibrium #3429
+        </h1>
+        <p class="text-softblue font-light text-base">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="flex flex-nowrap justify-between my-4 text-base">
+          <div class="text-personalizedcyan flex flex-nowrap items-center">
+            <img class="mr-2" src="images/icon-ethereum.svg" />
+            <p class="font-medium">0.041 ETH</p>
+          </div>
+          <div class="text-softblue flex flex-nowrap items-center">
+            <img class="mr-2" src="images/icon-clock.svg" />
+            <p class="font-light">3 days left</p>
+          </div>
+        </div>
+        <div
+          class="
+            flex
+            justify-start
+            items-center
+            border-t-2 border-verydarkblueline
+            pt-4
+          "
+        >
+          <img
+            class="w-8 border-personalizedwhite border rounded-full"
+            src="images/image-avatar.png"
+          />
+          <p class="ml-4 text-sm text-softblue font-light">
+            Creation of
+            <span
+              class="
+                text-personalizedwhite
+                hover:text-personalizedcyan hover:cursor-pointer
+              "
+              >Jules Wyvern</span
+            >
+          </p>
+        </div>
+      </div>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
