@@ -9,6 +9,8 @@ module.exports = {
         verydarkbluecardbg: "hsl(216, 50%, 16%)",
         verydarkblueline: "hsl(215, 32%, 27%)",
         personalizedwhite: "hsl(0, 0%, 100%)",
+        screenBackground: "hsla(218, 56%, 12%, 1)",
+        borderBackground: "hsla(218, 58%, 11%, 1)",
       },
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
