@@ -1,6 +1,6 @@
 # Frontend Mentor - NFT preview card component solution
 
-This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U).
 
 ## Table of contents
 
@@ -16,8 +16,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -29,83 +27,117 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](images/ScreenshotNFT.jpg)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://prj-12-nft-preview-card-component.vercel.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Vitejs](https://vitejs.dev/) - Frontend Development Framework
+- [Tailwindcss](https://tailwindcss.com) - A utility-first CSS framework
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Arbitrary values in Tailwindcss
+If you need to use a one-off border-{side}-{width} value that doesn’t make sense to include in your theme, use square brackets to generate a property on the fly using any arbitrary value.
 
-To see how you can add code snippets, see below:
+```css
+<div
+        class="
+          text-project
+          font-outfit
+          my-8
+          p-6
+          rounded-xl
+          max-w-xs
+          mx-auto
+          border-x-[15px]
+          border-t-[15px]
+          border-b-[30px]
+          border-borderBackground
+        "
+      >
+```
+
+Changing image opacity on hover
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div
+  class="
+              bg-personalizedcyan
+              w-full
+              h-full
+              rounded-xl
+              flex
+              justify-center
+              items-center
+              opacity-0
+              hover:opacity-70
+            "
+>
+  <img class="text-personalizedwhite" src="images/icon-view.svg" />
+</div>
 ```
+
+Personalizing Tailwindcss
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+module.exports = {
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        softblue: "hsl(215, 51%, 70%)",
+        personalizedcyan: "hsl(178, 100%, 50%)",
+        verydarkbluemainbg: "hsl(217, 54%, 11%)",
+        verydarkbluecardbg: "hsl(216, 50%, 16%)",
+        verydarkblueline: "hsl(215, 32%, 27%)",
+        personalizedwhite: "hsl(0, 0%, 100%)",
+        screenBackground: "hsla(218, 56%, 12%, 1)",
+        borderBackground: "hsla(218, 58%, 11%, 1)",
+      },
+      fontFamily: {
+        outfit: ["Outfit", "sans-serif"],
+      },
+      fontSize: {
+        project: "1.125rem",
+      },
+      backgroundImage: {
+        iconEthereum: "url('/images/image-equilibrium.jpg')",
+      },
+    },
+  },
+  plugins: [],
+};
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In this project I have applied more concepts of TailwindCSS. However this makes easy because of previous background in CSS basics.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [TailwindCSS Directives](https://tailwindcss.com/docs/functions-and-directives) - Use of @apply directive
+- [Customizing Colors in TailwindCSS](https://tailwindcss.com/docs/customizing-colors) - Adding personalized color names to be used in tailwindcss.
+- [Customizing Fonts in TailwindCSS](https://tailwindcss.com/docs/font-family#using-custom-values) - Adding Google fonts to be used in tailwindcss.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Gustavo Sanchez](https://www.gusanche.dev)
+- Frontend Mentor - [@gusanchedev](https://www.frontendmentor.io/profile/gusanchedev)
+- Github - [@gusanchedev](https://www.github.com/gusanchedev)
+- Twitter - [@gusanchedev](https://www.twitter.com/gusanchedev)
+- Linkedin - [gusanchedev](https://www.linkedin.com/in/gusanchedev/)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Thanks to Mariapaz for being my friend and support 💙
