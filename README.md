@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](images/ScreenshotNFT.jpg)
+![](images/ScreenshotNFT.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://prj-12-nft-preview-card-component.vercel.app/)
+- Solution URL: [FrontendMentor.io](https://www.frontendmentor.io/solutions/frontend-mentor-nft-preview-card-component-solution-hZcHu-QMw)
+- Live Site URL: [Vercel URL](https://prj-12-nft-preview-card-component.vercel.app/)
 
 ## My process
 
